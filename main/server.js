@@ -1,4 +1,12 @@
-// Front end is done, you are making the backend
+// Require express, path, and the files in the "/routes" folder
+const express = require("express");
+const path = require("path");
+const apiRoutes = require("./routes/apiRouts");
+const htmlRoutes = require("./routes/htmlRoutes");
+
+const PORT = 3001;
+
+const app = express();
 
 // You will need to make a routes folder and two(three) files in this folder --> apiRoutes.js, and htmlRoutes.js (index.js) [Activity 22 solution has this]
 
