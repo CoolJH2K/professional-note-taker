@@ -28,6 +28,11 @@ app.get("/", (req, res) =>
     res.sendFile(path.join(__dirname, "public/notes.html"))
 );
 
+// Add PORT listener
+app.listen(PORT, () =>
+    console.log("App listening at http://localhost:${PORT}")
+);
+
 // You will need to make a routes folder and two(three) files in this folder --> apiRoutes.js, and htmlRoutes.js (index.js) [Activity 22 solution has this]
 
 // ***The path set in your router.*('/yourPathHere') for these files needs to reflect it's positioning relative to the path called in server.js -- Activity 22... router middleware
