@@ -4,17 +4,16 @@ const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
 
 // Add localhost PORT
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
 // Add middleware
+app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use("/", htmlRoutes);
 app.use("/api", apiRoutes);
-
-app.use(express.static("public"));
 
 // GET Route for homepage
 app.get("/", (req, res) =>
@@ -30,8 +29,6 @@ app.get("/", (req, res) =>
 app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT}`)
 );
-
-// You will need to make a routes folder and two(three) files in this folder --> apiRoutes.js, and htmlRoutes.js (index.js) [Activity 22 solution has this]
 
 // ***The path set in your router.*('/yourPathHere') for these files needs to reflect it's positioning relative to the path called in server.js -- Activity 22... router middleware
 
