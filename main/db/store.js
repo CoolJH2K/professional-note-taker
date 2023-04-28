@@ -5,4 +5,5 @@ class Store {
     }
 }
 
+// Export Store
 module.exports = {Store};

@@ -1,3 +1,4 @@
+// Require express and path
 const app = require("express").Router();
 const path = require("path");
 
@@ -11,4 +12,5 @@ app.get("/notes", (req, res) =>
     res.sendFile(path.join(__dirname, "../public/notes.html"))
 );
 
+// Export app
 module.exports = app;

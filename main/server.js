@@ -16,6 +16,16 @@ app.use("/api", apiRoutes);
 
 app.use(express.static("public"));
 
+// GET Route for homepage
+app.get("/", (req, res) =>
+    res.sendFile(path.join(__dirname, "/public/index.html"))
+);
+
+// GET Route for notes page
+app.get("/", (req, res) => 
+    res.sendFile(path.join(__dirname, "/public/notes.html"))
+);
+
 // Add PORT listener
 app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT}`)
