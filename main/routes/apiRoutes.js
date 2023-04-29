@@ -1,9 +1,9 @@
 // Require express, path , and the fsUtils modules
 const app = require("express").Router();
 const path = require("path");
-const {readFromFile, writeToFile, readAndAppend} = require("../helpers/fsUtils");
+const {readFromFile, readAndAppend} = require("../helpers/fsUtils");
 
-router.get("/notes", (req, res) => {
+router.get("../public/notes.html", (req, res) => {
     console.info(`Request notes`);
     readFromFile("./db/db.json").then((data) => {
         console.log(data);
@@ -11,8 +11,8 @@ router.get("/notes", (req, res) => {
     });
 });
 
-router.post("/notes", (req, res) => {
-    console.info(`POSTED`);
+router.post("../public/notes.html", (req, res) => {
+    console.info(`POST`);
     const {title, text} = req.body;
 
     if (req.body) {
@@ -29,4 +29,5 @@ router.post("/notes", (req, res) => {
     }
 });
 
+// Export app
 module.exports = app;
