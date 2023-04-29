@@ -12,7 +12,7 @@ Here's some things I learned while working on this.
 2. I learned how to link webpages to each other by using express.js.
 3. I also learned how to set up localhosts and use them as PORTs.
 ## Link
-https://github.com/CoolJH2K/professional-note-taker
+https://CoolJH2K.github.io/professional-note-taker
 ## Screenshot
 ## Installation
 N/A
