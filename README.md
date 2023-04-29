@@ -17,6 +17,6 @@ N/A
 ## Usage
 Everyone is free to use the app if they don't want to forget something important.
 ## Credits
-N/A
+Original Code Used: https://github.com/coding-boot-camp/miniature-eureka
 ## License
 This uses the MIT License
